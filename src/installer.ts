@@ -44,13 +44,13 @@ export async function createBinDir(workDir: string): Promise<string> {
 
 export async function installer(version: string): Promise<void> {
   const extended: string = core.getInput('extended');
-  core.debug(`Hugo extended: ${extended}`);
+  core.info(`Hugo extended: ${extended}`);
 
   const osName: string = getOS(process.platform);
-  core.debug(`Operating System: ${osName}`);
+  core.info(`Operating System: ${osName}`);
 
   const toolURL: string = getURL(osName, extended, version);
-  core.debug(`toolURL: ${toolURL}`);
+  core.info(`toolURL: ${toolURL}`);
 
   const workDir = await createWorkDir();
   const binDir = await createBinDir(workDir);
