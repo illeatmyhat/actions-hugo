@@ -18,7 +18,7 @@ export default function getURL(os: string, extended: string, version: string): s
   };
 
   const hugoName = `hugo_${extendedStr(extended)}${version}_${os}-64bit`;
-  const baseURL = 'https://github.com/gohugoio/hugo/releases/download';
+  const baseURL = 'https://github.com/illeatmyhat/hugo/releases/download';
   const url = `${baseURL}/v${version}/${hugoName}.${ext(os)}`;
 
   return url;
